@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
 	int blanks = 9;
 	
 	//an index of button ids in order to eliminate lengthy switch statements
-	ArrayList<Integer> buttonIndex = new ArrayList<>();
-	ArrayList<String> winConditions = new ArrayList<>();
+	ArrayList<Integer> buttonIndex = new ArrayList<>(Arrays.asList(R.id.b1, R.id.b2, R.id.b3, R.id.b4, R.id.b5, R.id.b6, R.id.b7, R.id.b8, R.id.b9));
+	ArrayList<String> winConditions = new ArrayList<>(Arrays.asList("012", "345", "678", "036", "147", "258", "048", "246"));
 	
 	int[] gamePieces = new int[3];
 	int player = 1;
@@ -62,9 +62,6 @@ public class MainActivity extends AppCompatActivity {
 		playerOneScore = findViewById(R.id.playerOneScore);
 		playerTwoScore = findViewById(R.id.playerTwoScore);
 		
-		buttonIndex.addAll(Arrays.asList(R.id.b1, R.id.b2, R.id.b3, R.id.b4, R.id.b5, R.id.b6, R.id.b7, R.id.b8, R.id.b9));
-		winConditions.addAll(Arrays.asList("012", "345", "678", "036", "147", "258", "048", "246"));
-		
 		//set light or dark theme based on System setting
 		Configuration config = getResources().getConfiguration();
 		int currentNightMode = config.uiMode & Configuration.UI_MODE_NIGHT_MASK;
@@ -92,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
 			else player = 1;
 			drawBoard();
 			int winner = checkWinCondition();
-			
 			//somebody has won or board is full
 			if (winner != 0 || blanks == 0) {
 				if (winner == 0) textview.setText("Its a Tie.");

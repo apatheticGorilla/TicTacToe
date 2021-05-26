@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="player_1">player 1:</string>
+    <string name="_0">0</string>
+    <string name="player_2">player 2:</string>
+    <string name="player_1_s_turn">Player 1\'s turn</string>
+    <string name="restart">restart</string>
+    <string name="quit">quit</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="IconLocation">
+        <ignore path="src/main/res/drawable/blankgamepiece.webp" />
+        <ignore path="src/main/res/drawable/board.webp" />
+        <ignore path="src/main/res/drawable/board_dark.webp" />
+        <ignore path="src/main/res/drawable/ogamepiece_dark.webp" />
+        <ignore path="src/main/res/drawable/ogamepiece_light.webp" />
+        <ignore path="src/main/res/drawable/xgamepiece_dark.png" />
+        <ignore path="src/main/res/drawable/xgamepiece_light.png" />
+    </issue>
+</lint>

@@ -21,7 +21,7 @@ import java.util.Arrays;
  */
 public class MainActivity extends AppCompatActivity {
 	ImageView grid;
-	ImageView b1, b2, b3, b4, b5, b6, b7, b8, b9;
+	//ImageView b1, b2, b3, b4, b5, b6, b7, b8, b9;
 	Button clear;
 	Button quit;
 	TextView textview;
@@ -44,16 +44,6 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		for (int i = 0; i < 9; i++) board[i] = 0;
-		
-		b1 = findViewById(R.id.b1);
-		b2 = findViewById(R.id.b2);
-		b3 = findViewById(R.id.b3);
-		b4 = findViewById(R.id.b4);
-		b5 = findViewById(R.id.b5);
-		b6 = findViewById(R.id.b6);
-		b7 = findViewById(R.id.b7);
-		b8 = findViewById(R.id.b8);
-		b9 = findViewById(R.id.b9);
 		
 		clear = findViewById(R.id.clear);
 		quit = findViewById(R.id.quit);
@@ -85,8 +75,10 @@ public class MainActivity extends AppCompatActivity {
 		if (board[index] == 0 && !gameOver) {
 			board[index] = player;
 			blanks--;
-			if (player == 1) player = 2;
-			else player = 1;
+			if (player == 1)
+				player = 2;
+			else
+				player = 1;
 			drawBoard();
 			int winner = checkWinCondition();
 			//somebody has won or board is full

@@ -14,11 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-/*
- ***IMPORTANT!***
- * Requires the custom assets I made which can be found here: https://drive.google.com/file/d/1h1SAMj0VJ6csJU5ypGxiWOV3or9sY_T7/view?usp=sharing
- 
- */
+
 public class MainActivity extends AppCompatActivity {
 	ImageView grid;
 	//ImageView b1, b2, b3, b4, b5, b6, b7, b8, b9;
